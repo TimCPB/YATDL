@@ -16,7 +16,7 @@ test('user can see a note', () => {
 
 test('user can see a list of notes', () => {
   render(<NoteList />);
-  const note = screen.getByText("A test note!");
+  const note = screen.getByText(`A test note!`);
   const note2 = screen.getByText("Another note!")
 
   expect(note).toBeInTheDocument()
