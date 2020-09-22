@@ -20,5 +20,5 @@ test('user can see a list of notes', () => {
   const note2 = screen.getByText("Another note!")
 
   expect(note).toBeInTheDocument()
-  expect(note2).toBeInTheDocument();
+  expect(note2).toBeInTheDocument()
 })
