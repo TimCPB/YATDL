@@ -22,3 +22,12 @@ test('user can see a list of notes', () => {
   expect(note).toBeInTheDocument()
   expect(note2).toBeInTheDocument()
 })
+
+test('user can create a note', () => {
+  render(<NoteList />);
+  const textBox = screen.getByRole("textbox")
+  userEvent.type(textBox, "I'm creating a note")
+  userEvent.click(screen.getByText("Submit"))
+  const note = screen.getByText("I'm creating a note")
+  expect(note).toBeInTheDocument();
+})
