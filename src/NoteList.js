@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+import Note from './Note'
 
 class NoteList extends Component {
   constructor(props){
@@ -11,7 +12,7 @@ class NoteList extends Component {
   render(){
     return(
       <div className="note-list">
-        {this.state.note.map((note, index) => <p key={index}>{note}</p>)}
+        {this.state.note.map((note, index) => <ul key={index}><Note content={note}/></ul>)}
       </div>
 
     )
